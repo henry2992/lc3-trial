@@ -102,3 +102,42 @@ $light-text-color: lighten($text-color, 10%);
 //////////////////////////////////////////////
 
 @import "views/layouts/default";
+
+
+/* Custom Fonts */
+
+
+.blurred-text {
+  color: rgba(255, 255, 255, 0);
+/*  filter: progid: DXImageTransform.Microsoft.Blur(pixelradius=2);
+  -webkit-touch-callout: none;*/
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: 0 0 8px #5a5a5a;
+  zoom: 1;
+}
+
+.bo-button-grey {
+  border-bottom: 1px solid #ccc;
+}
+
+.dialog {
+  background: #fff;
+  border: 3px solid #1293f6;
+  left: 5%;
+  padding: 10px;
+  position: absolute;
+  right: 5%;
+  top: 2em
+}
+
+.header-logo span {
+  font-size: 2.6em;
+  color: #49acf9;
+}
+
+
+

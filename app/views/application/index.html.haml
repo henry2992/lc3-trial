@@ -1,3 +1,61 @@
-.text-center
-  %h1 Welcome to the LitCharts Trial App!
-  %p This app is used for trial tasks and projects.
+.container
+  .row
+    .col-sm-3.hidden-xs
+      %h1 Refine Your Search
+      .search-list
+        .search-list-header
+          %p Book Title (25)
+        .search-list-item
+          %p A walk to Remember
+          %p Big Bad Ballons
+          %p Daring Rescuers
+          %p Hints of Darkness
+          %p The Treasury Secretary's Wife
+          %p (see more)
+        .search-list-header
+          %p Author (25)
+        .search-list-item
+          %p Arthur Miller (3)
+          %p Toni Morrison (3)
+          %p Chimamanda Ngozi Adichie (1)
+          %p Davey Croket (1)
+          %p Lord Byron
+          %p (see more)
+    .col-sm-9
+      .themes-wrapper.bo-button-grey
+        %h1 Theme You Were Reading
+
+        %h2 Ambition and Fallibility in Frankenstein by Mary Shelley
+
+        %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievements. Yet there ambitions also make them...
+        / Set heigh
+
+        %p (read full them analysis)
+      .themes.index-list
+        %h1 ## Related Themes from Other Text
+        %p Themes are ordered from most to least related.
+        .themes.index-list-item
+          .row
+            .col-xs-12
+              %h2.index-list-item-title 
+                Ambition and Fallibility in Frankenstein by Mary Shelley
+              %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+        .themes.index-list-item
+          .row
+            .col-xs-12
+              %h2.index-list-item-title 
+                Ambition and Fallibility in Frankenstein by Mary Shelley
+              %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+        .non-logged-dialog
+          .header-logo
+            %a
+              = image_tag("header-icon-placeholder.png")
+              %span LitCharts
+          %p Get compare and contrats superpower
+
+          %p Unlock Related Themes for "Ambition and Fallibility" as well as for every one of thr other 2,478 themes we cover.
+
+          %a Get LitCharts A+
+
+          font-size: 2.6em;
+
