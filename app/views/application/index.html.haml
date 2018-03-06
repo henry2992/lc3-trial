@@ -22,40 +22,56 @@
           %p Lord Byron
           %p (see more)
     .col-sm-9
-      .themes-wrapper.bo-button-grey
-        %h1 Theme You Were Reading
+      .row
+        .col-sm-12
+          .theme-title
+            %h1 Theme You Were Reading
+        .col-sm-3.col-3
+          .theme-item-image-bg
+            =image_tag('the-aeneid-the-gods-and-divine-intervention.large.white.desktop.png', class: "theme-item-image", height: '100px')
+        .col-sm-9
+          .themes-wrapper.bo-button-grey      
+            %h4 
+              %a.link-bold Ambition and Fallibility 
+              in 
+              %a Frankenstein 
+              by 
+              %a Mary Shelley
 
-        %h2 Ambition and Fallibility in Frankenstein by Mary Shelley
+            %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievements. Yet there ambitions also make them...
+            / Set heigh
 
-        %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievements. Yet there ambitions also make them...
-        / Set heigh
-
-        %p (read full them analysis)
+            %p
+              %a (read full them analysis)
       .themes.index-list
-        %h1 ## Related Themes from Other Text
+        .theme-title
+          %h1 ## Related Themes from Other Text
         %p Themes are ordered from most to least related.
-        .themes.index-list-item
-          .row
-            .col-xs-12
-              %h2.index-list-item-title 
-                Ambition and Fallibility in Frankenstein by Mary Shelley
-              %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
-        .themes.index-list-item
-          .row
-            .col-xs-12
-              %h2.index-list-item-title 
-                Ambition and Fallibility in Frankenstein by Mary Shelley
-              %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
-        .non-logged-dialog
-          .header-logo
-            %a
-              = image_tag("header-icon-placeholder.png")
-              %span LitCharts
-          %p Get compare and contrats superpower
+        .relative.blurred-text
+          .themes.index-list-item
+            .row
+              .col-xs-12
+                %h2.index-list-item-title 
+                  Ambition and Fallibility in Frankenstein by Mary Shelley
+                %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+          .themes.index-list-item
+            .row
+              .col-xs-12
+                %h2.index-list-item-title 
+                  Ambition and Fallibility in Frankenstein by Mary Shelley
+                %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+          .non-logged-backdrop        
+          .non-logged-dialog.text-center.font-family
+            .header-logo
+              %a
+                = image_tag("logo-books-and-text-blue-a-plus.svg", class: "theme-dialog-title")
+            %p 
+              Get 
+              %span.font-bold compare and contrats 
+              superpower
 
-          %p Unlock Related Themes for "Ambition and Fallibility" as well as for every one of thr other 2,478 themes we cover.
+            %p Unlock Related Themes for "Ambition and Fallibility" as well as for every one of thr other 2,478 themes we cover.
 
-          %a Get LitCharts A+
-
-          font-size: 2.6em;
-
+            %a.btn.btn-lc-red
+              %i.fa.fa-lock.lock-icon
+              Get LitCharts A+
