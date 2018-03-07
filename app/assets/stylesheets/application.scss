@@ -157,6 +157,10 @@ $light-text-color: lighten($text-color, 10%);
   color: $link-color;
 }
 
+.header {
+  margin-bottom: 20px;
+}
+
 .relative {
   position: relative
 }
@@ -189,6 +193,12 @@ $light-text-color: lighten($text-color, 10%);
     font-weight: bold;
     font-size: $font-size-base * 2;
   }
+
+  h2 {
+    font-family: $font-family-bold;
+    font-weight: bold;
+    font-size: $font-size-base * 1.4;
+  }
 }
 
 .index-list-item-title {
@@ -207,4 +217,73 @@ $light-text-color: lighten($text-color, 10%);
   height: 80px;
   width: 80px;
   vertical-align: middle;
+}
+
+.search-list-header {
+  background-color: $dark-gray;
+  color: white;
+  font-family: $font-family-bold;
+  font-weight: 700;
+  border-radius: 5px;
+
+  p {
+    padding: 4px 10px;
+  }
+}
+
+.search-list-item {
+  font-family: $font-family-base;
+  font-size: $font-size-base * 1.1;
+
+  p {
+    input[type=checkbox] + label {
+      margin: 0.2em;
+      cursor: pointer;
+      padding: 0.2em;
+    }
+  
+    input[type=checkbox] {
+      display: none;
+    }
+
+    input[type=checkbox] + label:before {
+      content: "\2714";
+      border: 0.1em solid #000;
+      border-radius: 0.2em;
+      display: inline-block;
+      width: 1.1em;
+      height: 1em;
+      padding-bottom: 1em;
+      margin-right: 0.1em;
+      vertical-align: bottom;
+      color: transparent;
+      transition: .2s;
+    }
+
+    input[type=checkbox] + label:active:before {
+      transform: scale(0);
+    }
+    
+    input[type=checkbox]:checked + label:before {
+      background-color: #fff;
+      border-color: black;
+      color: black;
+    }
+    
+    input[type=checkbox]:disabled + label:before {
+      transform: scale(1);
+      border-color: black;
+    }
+    
+    input[type=checkbox]:checked:disabled + label:before {
+      transform: scale(1);
+      background-color: #bfb;
+      border-color: black;
+    }
+  }
+}
+
+.search-list-see-more {
+  padding-left: 15px;
+  margin-bottom: 20px;
 }

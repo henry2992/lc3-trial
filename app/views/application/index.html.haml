@@ -1,26 +1,59 @@
 .container
   .row
     .col-sm-3.hidden-xs
-      %h1 Refine Your Search
+      .theme-title
+        %h2 Refine Your Search by...
       .search-list
         .search-list-header
           %p Book Title (25)
         .search-list-item
-          %p A walk to Remember
-          %p Big Bad Ballons
-          %p Daring Rescuers
-          %p Hints of Darkness
-          %p The Treasury Secretary's Wife
-          %p (see more)
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            A walk to Remember
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Big Bad Ballons
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Daring Rescuers
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Hints of Darkness
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            The Treasury Secretary's Wife
+        .search-list-see-more
+          %a (see more)
         .search-list-header
           %p Author (25)
         .search-list-item
-          %p Arthur Miller (3)
-          %p Toni Morrison (3)
-          %p Chimamanda Ngozi Adichie (1)
-          %p Davey Croket (1)
-          %p Lord Byron
-          %p (see more)
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Arthur Miller (3)
+          %p 
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Toni Morrison (3)
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Chimamanda Ngozi Adichie (1)
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Davey Croket (1)
+          %p
+            =check_box_tag "input1"
+            =label_tag "input1", ''
+            Lord Byron
+        .search-list-see-more
+          %a (see more)
     .col-sm-9
       .row
         .col-sm-12
