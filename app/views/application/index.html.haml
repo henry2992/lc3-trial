@@ -5,53 +5,31 @@
         %h2 Refine Your Search by...
       .search-list
         .search-list-header
-          %p Book Title (25)
+          %p 
+            Book Title (
+            =@books.count
+            )
         .search-list-item
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            A walk to Remember
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Big Bad Ballons
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Daring Rescuers
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Hints of Darkness
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            The Treasury Secretary's Wife
+          - @books.each do |b|
+            %p
+              =check_box_tag "input1"
+              =label_tag "input1", ''
+              = b.title
+          
         .search-list-see-more
           %a (see more)
         .search-list-header
-          %p Author (25)
-        .search-list-item
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Arthur Miller (3)
           %p 
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Toni Morrison (3)
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Chimamanda Ngozi Adichie (1)
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Davey Croket (1)
-          %p
-            =check_box_tag "input1"
-            =label_tag "input1", ''
-            Lord Byron
+            Author (
+            =@books.count
+            )
+        .search-list-item
+          - @books.each do |b|
+            %p
+              =check_box_tag "input1"
+              =label_tag "input1", ''
+              = b.author
+          
         .search-list-see-more
           %a (see more)
     .col-sm-9
@@ -59,17 +37,19 @@
         .col-sm-12
           .theme-title
             %h1 Theme You Were Reading
-        .col-sm-3.col-3
-          .theme-item-image-bg
-            =image_tag('the-aeneid-the-gods-and-divine-intervention.large.white.desktop.png', class: "theme-item-image", height: '100px')
-        .col-sm-9
+        .col-sm-3.col-xs-3.text-center
+          =image_tag('the-aeneid-the-gods-and-divine-intervention.large.white.desktop.png', class: "theme-item-image", height: '100px')
+        .col-sm-9.col-xs-9
           .themes-wrapper.bo-button-grey      
-            %h4 
-              %a.link-bold Ambition and Fallibility 
+            %h4
+              %a.link-bold 
+                = @theme.name 
               in 
-              %a Frankenstein 
+              %a
+                = @theme.book.title 
               by 
-              %a Mary Shelley
+              %a
+                = @theme.book.author
 
             %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievements. Yet there ambitions also make them...
             / Set heigh
@@ -80,19 +60,24 @@
         .theme-title
           %h1 ## Related Themes from Other Text
         %p Themes are ordered from most to least related.
-        .relative.blurred-text
-          .themes.index-list-item
-            .row
-              .col-xs-12
-                %h2.index-list-item-title 
-                  Ambition and Fallibility in Frankenstein by Mary Shelley
-                %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
-          .themes.index-list-item
-            .row
-              .col-xs-12
-                %h2.index-list-item-title 
-                  Ambition and Fallibility in Frankenstein by Mary Shelley
-                %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+        .relative
+          .themes.index-list-item.blurred-text
+            = @related_themes.each do |b|
+              .row
+                .col-sm-3.col-xs-3.text-center
+                  =image_tag('the-aeneid-the-gods-and-divine-intervention.large.white.desktop.png', class: "theme-item-image", height: '100px')
+                .col-sm-9.col-xs-9
+                  %h2.index-list-item-title 
+                    %a.link-bold 
+                      = b.name 
+                    in 
+                    %a
+                      = b.book.title 
+                    by 
+                    %a
+                      = b.book.author
+                  %p Through Vistor and Walton, Frankenstein portrays human beings as deeply ambitious, and yet also deeply flawed. Both Victor and Walton dream of transforming society and bringing glory to themselves through their scientific achievement.
+          
           .non-logged-backdrop        
           .non-logged-dialog.text-center.font-family
             .header-logo

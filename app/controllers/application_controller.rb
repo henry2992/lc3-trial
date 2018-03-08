@@ -4,5 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @books = Book.all
+    @theme = Theme.first
+    @related_themes = Theme.related_themes(@theme.category_id, @theme.id)
   end
 end
